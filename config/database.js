@@ -7,10 +7,14 @@ const RentedCarInfo = require('../models/RentedCarInfo')
 
 module.exports = config => {
     mongoose.connect(config.dbPath, {
-        useMongoClient: true
+        useMongoClient: true,
+    }).then(()=>{
+        console.log("connect to db!")
+    }).catch(err =>{
+        console.log('Error: ', err.message)
     });       
     const db = mongoose.connection;
-    db.once('open', err => {                //.once - we get hold of one, but once
+    db.once('open', err => {           
         if (err) throw err;
         User.seedAdminUser().then(() => {
             console.log('Database ready');                
