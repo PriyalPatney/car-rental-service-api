@@ -1,0 +1,19 @@
+<form action="/edit/{{foundCar._id}}?_method=PUT" method="POST">
+  <fieldset>
+    <legend>Update car {{foundCar.model}}:</legend>
+
+    <label for="name">Model:</label>
+    <input type="text" name="model" value="{{foundCar.model}}"><br>
+
+    <label for="name">vehicle No:</label>
+    <input type="text" name="vehNo" value="{{foundCar.vehNo}}"><br>
+
+    <label for="name">Price:</label>
+    <input type="text" name="price" value="{{foundCar.price}}"><br>
+
+    <label for="name">capacity:</label>
+    <input type="text" name="capacity" value="{{foundCar.capacity}}"><br>
+
+    <input type="submit" value="Update Car">
+  </fieldset>
+</form>

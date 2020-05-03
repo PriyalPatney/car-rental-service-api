@@ -1,0 +1,38 @@
+<h1 class="home-title">All available cars for rent</h1>
+
+<form action="/available" method="GET" class="form-inline my-2 my-lg-0">
+  <fieldset>
+    <legend>Check Availibility</legend>
+    <legend>From:</legend>
+    <input class="form-control mr-sm-2" type="date" name="dateFrom">
+    <legend>To:</legend>
+    <input class="form-control mr-sm-2" type="date" name="dateTo">
+    <input type="submit" class="btn btn-outline-success my-2 my-sm-0"><br>
+  </fieldset>
+</form>
+<br><br><br><br><br><br>
+    {{#each searchedCars1}}
+       <div class="car-section row">
+  {{!-- <img class="home-page-imgages rounded float-left" src="{{this.image}}"> --}}
+  <div class="col-md-2 col-sm12">
+    <h5>Model:</h5>
+    <p>{{this.model}}</p>
+  </div>
+  <div class="col-md-2 col-sm12">
+    <h5>vehicle No:</h5>
+    <p>{{this.vehNo}}</p>
+  </div>
+  <div class="col-md-2 col-sm12">
+    <h5>Price</h5>
+    <p>{{this.price}}</p>
+  </div>
+  <div class="col-md-2 col-sm12">
+    <h5>capacity</h5>
+    <p>{{this.capacity}}</p>
+  </div>
+  <div class="col-md-2 col-12">
+    <a href="/carDetails/{{this._id}}"><b>TAKE IT THIS CAR</b></a>
+  </div>
+
+</div>
+    {{/each}}

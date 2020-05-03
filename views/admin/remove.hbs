@@ -1,0 +1,26 @@
+<h1>Update Or Remove</h1>
+
+    {{#each searchedCars2}}
+        <h3>Model:</h3>
+        <p>{{this.model}}</p>
+
+        <h3>vehNo:</h3>
+        <p>{{this.vehNo}}</p>
+
+        <h3>Price:</h3>
+        <p>{{this.price}}</p>
+
+        <h3>capacity:</h3>
+        <p>{{this.capacity}}</p>
+        <a href="/carDetails/{{this._id}}"><b>TAKE IT THIS CAR</b></a><br>
+        {{#if ../currentUser.isAdmin}}
+        <form action="/rmCar/{{this._id}}?_method=DELETE" method="POST">
+      <button>deltet</button>
+    </form>
+    <form action="/edit/{{this._id}}" method="PUT">
+      <button>Update</button>
+    </form>
+        {{/if}}
+        <br>
+
+    {{/each}}
