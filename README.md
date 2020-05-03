@@ -8,7 +8,8 @@ https://vast-wave-52199.herokuapp.com/
 
 ### Following are the routes:-
 
-Admin routes:-
+Admin routes:- 
+(username = Admin, password = Admin)
 
 1. https://vast-wave-52199.herokuapp.com/login  (get - login page)
 1. https://vast-wave-52199.herokuapp.com/login  (post - login page)
