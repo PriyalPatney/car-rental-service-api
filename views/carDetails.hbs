@@ -2,30 +2,29 @@
 
 
 <br> <br>
-        <h3>Model:</h3>
-        <p>{{foundCar.model}}</p>
+<h3>Model:</h3>
+<p>{{foundCar.model}}</p>
 
-        <h3>image:</h3>
-        <p><img src="{{foundCar.image}}"></p>
+<h3>image:</h3>
+<p><img src="{{foundCar.image}}"></p>
 
-        <h3>Price:</h3>
-        <p>{{foundCar.price}}</p>
+<h3>Price:</h3>
+<p>{{foundCar.price}}</p>
 
-        <h3>Year:</h3>
-        <p>{{foundCar.year}}</p>
+<h3>Year:</h3>
+<p>{{foundCar.year}}</p>
 
-        <br><br>
-        
+<br><br>
 
-        <form action="/takeCar" method="POST">
-                <fieldset>
+
+<form action="/takeCar" method="POST">
+        <fieldset>
                 <legend>From:</legend>
-                {{!-- <input type="date" name="dateOfRental"> --}}
                 <input type="date" name="dateFrom">
                 <legend>To:</legend>
-                <input type="date" name="dateTo">               
+                <input type="date" name="dateTo">
                 <input type="text" name="carId" value="{{foundCar._id}}" style="display:none"><br><br>
                 <input type="submit" value="RENT NOW">
-                
-                </fieldset>
-        </form>
+
+        </fieldset>
+</form>

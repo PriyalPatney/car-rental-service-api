@@ -1,29 +1,34 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
-const User = require('../models/User');
-const Car = require('../models/Car');
-const RentedCarInfo = require('../models/RentedCarInfo')
+const User = require("../models/User");
+const Car = require("../models/Car");
+const RentedCarInfo = require("../models/RentedCarInfo");
 
-module.exports = config => {
-    mongoose.connect(config.dbPath, {
-        useMongoClient: true,
-    }).then(()=>{
-        console.log("connect to db!")
-    }).catch(err =>{
-        console.log('Error: ', err.message)
-    });       
-    const db = mongoose.connection;
-    db.once('open', err => {           
-        if (err) throw err;
-        User.seedAdminUser().then(() => {
-            console.log('Database ready');                
-        }).catch((reason) => {
-            console.log('Something went wrong');
-            console.log(reason);
-        });
+module.exports = (config) => {
+  mongoose
+    .connect(config.dbPath, {
+      useMongoClient: true,
+    })
+    .then(() => {
+      console.log("connect to db!");
+    })
+    .catch((err) => {
+      console.log("Error: ", err.message);
     });
-    db.on('error', reason => {
+  const db = mongoose.connection;
+  db.once("open", (err) => {
+    if (err) throw err;
+    User.seedAdminUser()
+      .then(() => {
+        console.log("Database ready");
+      })
+      .catch((reason) => {
+        console.log("Something went wrong");
         console.log(reason);
-    });
+      });
+  });
+  db.on("error", (reason) => {
+    console.log(reason);
+  });
 };

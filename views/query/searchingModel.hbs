@@ -7,23 +7,23 @@
     <label for="name">Model:</label>
     <input type="text" name="model">
     <input type="submit"><br>
-</fieldset>
+  </fieldset>
 </form>
 
-    {{#each searchedCars}}
-        <h3>Model:</h3>
-        <p>{{this.newModel}}</p>
+{{#each searchedCars}}
+<h3>Model:</h3>
+<p>{{this.newModel}}</p>
 
-        <h3>vehNo:</h3>
-        <p>{{this.vehNo}}</p>
+<h3>vehNo:</h3>
+<p>{{this.vehNo}}</p>
 
-        <h3>Price:</h3>
-        <p>{{this.price}}</p>
+<h3>Price:</h3>
+<p>{{this.price}}</p>
 
-        <h3>capacity:</h3>
-        <p>{{this.capacity}}</p>
-        <a href="/carDetails/{{this._id}}"><b>TAKE IT THIS CAR</b></a><br>
-        <a href="/rmCar/{{this._id}}"><b> Remove car</b></a>
-        <br>
+<h3>capacity:</h3>
+<p>{{this.capacity}}</p>
+<a href="/carDetails/{{this._id}}"><b>Rent</b></a><br>
+<a href="/rmCar/{{this._id}}"><b> Remove car</b></a>
+<br>
 
-    {{/each}}
+{{/each}}

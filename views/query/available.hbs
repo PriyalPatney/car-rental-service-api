@@ -11,9 +11,8 @@
   </fieldset>
 </form>
 <br><br><br><br><br><br>
-    {{#each searchedCars1}}
-       <div class="car-section row">
-  {{!-- <img class="home-page-imgages rounded float-left" src="{{this.image}}"> --}}
+{{#each searchedCars1}}
+<div class="car-section row">
   <div class="col-md-2 col-sm12">
     <h5>Model:</h5>
     <p>{{this.model}}</p>
@@ -31,8 +30,8 @@
     <p>{{this.capacity}}</p>
   </div>
   <div class="col-md-2 col-12">
-    <a href="/carDetails/{{this._id}}"><b>TAKE IT THIS CAR</b></a>
+    <a href="/carDetails/{{this._id}}"><b>Rent</b></a>
   </div>
 
 </div>
-    {{/each}}
+{{/each}}
