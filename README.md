@@ -3,12 +3,10 @@
 postman collections link:
 https://www.getpostman.com/collections/cf22bb2eee606b7a39cf
 
-heroku hoste link:
+Project link:
 https://vast-wave-52199.herokuapp.com/
 
-### Following are the routes:-
-
-Admin routes:- 
+## Admin routes:- 
 (username = Admin, password = Admin)
 
 1. https://vast-wave-52199.herokuapp.com/login  (get - login page)
@@ -19,7 +17,7 @@ Admin routes:-
 1. https://vast-wave-52199.herokuapp.com/edit/{{carId}}  (put - update name)
 1. https://vast-wave-52199.herokuapp.com/rmCar/{{carId}}  (delete - delete the car)
 
-User routes:-
+## User routes:-
 
 1. https://vast-wave-52199.herokuapp.com/register (get - register new user)
 1. https://vast-wave-52199.herokuapp.com/register  (post - register new user)
